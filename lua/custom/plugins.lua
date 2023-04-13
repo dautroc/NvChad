@@ -60,6 +60,14 @@ local plugins = {
     end,
   },
 
+  {
+    "folke/which-key.nvim",
+    config = function()
+      require "plugins.configs.whichkey"
+      require "custom.configs.whichkey"
+    end,
+  }
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

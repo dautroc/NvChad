@@ -6,6 +6,7 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>s"] = { ":w<cr>", "save" },
     ["<leader>q"] = { ":q<cr>", "quit" },
+    ["<leader>Q"] = { ":qa<cr>", "quit all" },
     ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
 
     -- vim tab navigation
