@@ -8,14 +8,15 @@ end
 wk.register(
   {
     ["<leader>"] = {
-      f = {
-        name = "+find",
-        r = { name = "+rails" },
-      },
+      f = { name = "+find" },
       m = { name = "+misc" },
       l = { name = "+lsp" },
       g = { name = "+git" },
       b = { name = "+buffers" },
+      r = {
+        name = "+rails",
+        t = { name = "+tests" },
+      },
     }
   }
 )

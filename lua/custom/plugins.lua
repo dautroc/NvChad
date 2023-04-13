@@ -66,7 +66,15 @@ local plugins = {
       require "plugins.configs.whichkey"
       require "custom.configs.whichkey"
     end,
-  }
+  },
+
+  {
+    "NvChad/nvterm",
+    opts = overrides.nvterm,
+  },
+
+  { "tpope/vim-projectionist" },
+
 
   -- To make a plugin not be loaded
   -- {

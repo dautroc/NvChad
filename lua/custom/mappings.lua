@@ -15,7 +15,7 @@ M.general = {
     ["tk"] = { ":tabnext<cr>", "tab next", opts = { nowait = true } },
     ["tj"] = { ":tabprev<cr>", "tab prev", opts = { nowait = true } },
 
-    -- Keep cursor in the middle of the screen
+    -- keep cursor in the middle of the screen
     ["n"] = { "nzzzv" },
     ["N"] = { "Nzzzv"},
   },
@@ -31,7 +31,7 @@ M.hop = {
       ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
       "find current line backward",
     },
-    ["s"] = { ":HopWord<cr>", "find word" },
+    ["s"] = { ":HopChar2<cr>", "find word" },
   },
 }
 
@@ -54,27 +54,37 @@ M.telescope = {
     ["<leader>ft"] = { ":Telescope terms<CR>", "find terms" },
     ["<leader>fk"] = { ":Telescope keymaps<CR>", "find keymaps" },
     ["<leader>fl"] = { ":Telescope resume<CR>", "last find" },
-    ["<leader>frm"] = { ":Telescope find_files cwd=app/models<CR>", "rails models" },
-    ["<leader>frs"] = { ":Telescope find_files cwd=app/services<CR>", "rails services" },
-    ["<leader>frc"] = { ":Telescope find_files cwd=app/controllers<CR>", "rails controllers" },
-    ["<leader>fra"] = { ":Telescope find_files cwd=app/api<CR>", "rails api" },
-    ["<leader>frp"] = { ":Telescope find_files cwd=app/policies<CR>", "rails policies" },
-    ["<leader>fri"] = { ":Telescope find_files cwd=app/mailers<CR>", "rails mailer" },
-    ["<leader>frf"] = { ":Telescope find_files cwd=app/factories<CR>", "rails factories" },
-    ["<leader>frl"] = { ":Telescope find_files cwd=app/locales<CR>", "rails locales" },
+  },
+}
+
+M.rails = {
+  n = {
+    ["<leader>rm"] = { ":Telescope find_files cwd=app/models<CR>", "rails models" },
+    ["<leader>rs"] = { ":Telescope find_files cwd=app/services<CR>", "rails services" },
+    ["<leader>rc"] = { ":Telescope find_files cwd=app/controllers<CR>", "rails controllers" },
+    ["<leader>ra"] = { ":Telescope find_files cwd=app/api<CR>", "rails api" },
+    ["<leader>rp"] = { ":Telescope find_files cwd=app/policies<CR>", "rails policies" },
+    ["<leader>ri"] = { ":Telescope find_files cwd=app/mailers<CR>", "rails mailer" },
+    ["<leader>rf"] = { ":Telescope find_files cwd=app/factories<CR>", "rails factories" },
+    ["<leader>rl"] = { ":Telescope find_files cwd=app/locales<CR>", "rails locales" },
+
+    -- group test
+    ["<leader>rta"] = { ":A<cr>", "open relative test"},
+    ["<leader>rtv"] = { ":AV<cr>", "vopen relative test"},
+    ["<leader>rtt"] = { ":AT<cr>", "topen relative test"},
   },
 }
 
 M.buffers = {
   n = {
     ["<leader>by"] = { ":let @+ = expand('%')<CR>", "yank buffer path" },
-    ["<leader>bY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>","yank buffer path with line number" }
+    ["<leader>bY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>","yank buffer path with line number" },
   },
 }
 
 M.misc = {
   n = {
-    ["<leader>frm"] = { ":A", ":A" },
+    ["<leader>mY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>","yank buffer path with line number" },
   },
 }
 
