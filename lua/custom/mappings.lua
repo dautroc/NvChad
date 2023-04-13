@@ -52,6 +52,8 @@ M.lspconfig = {
 M.telescope = {
   n = {
     ["<leader>ft"] = { ":Telescope terms<CR>", "find terms" },
+    ["<leader>fk"] = { ":Telescope keymaps<CR>", "find keymaps" },
+    ["<leader>fl"] = { ":Telescope resume<CR>", "last find" },
     ["<leader>frm"] = { ":Telescope find_files cwd=app/models<CR>", "rails models" },
     ["<leader>frs"] = { ":Telescope find_files cwd=app/services<CR>", "rails services" },
     ["<leader>frc"] = { ":Telescope find_files cwd=app/controllers<CR>", "rails controllers" },

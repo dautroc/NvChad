@@ -15,6 +15,7 @@ wk.register(
       m = { name = "+misc" },
       l = { name = "+lsp" },
       g = { name = "+git" },
+      b = { name = "+buffers" },
     }
   }
 )
