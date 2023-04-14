@@ -5,6 +5,7 @@ M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<C-f>"] = { ":lua require('zen-mode').toggle({ window = { width = .5 }})<CR>", "focus window" },
+    ["<tab>"] = { ":b#<CR>", "last buffer" },
     ["<leader>w"] = { ":w<CR>", "write" },
     ["<leader>q"] = { ":q<CR>", "quit" },
     ["<leader>Q"] = { ":qa<CR>", "quit all" },
