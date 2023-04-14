@@ -100,7 +100,7 @@ M.buffers = {
 
 M.misc = {
   n = {
-    ["<leader>mY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>","yank buffer path with line number" },
+    ["<leader>mt"] = { ":Telescope themes<CR>", "themes" },
   },
 }
 
