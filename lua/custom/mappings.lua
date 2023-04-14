@@ -3,8 +3,6 @@ local M = {}
 
 M.disabled = {
   n = {
-    ["<leader>w"] = "",
-
     ["<leader>ph"] = "",
     ["<leader>pt"] = "",
 
@@ -16,7 +14,10 @@ M.disabled = {
     ["<leader>cm"] = "",
     ["<leader>cc"] = "",
 
+    ["<leader>w"] = "",
     ["<leader>b"] = "",
+    ["<leader>h"] = "",
+    ["<leader>v"] = "",
     ["<leader>gt"] = "",
     ["<C-a>"] = "",
   },
