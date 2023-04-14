@@ -111,6 +111,18 @@ M.rails = {
     ["<leader>rta"] = { ":A<CR>", "open relative test"},
     ["<leader>rtv"] = { ":AV<CR>", "vopen relative test"},
     ["<leader>rtt"] = { ":AT<CR>", "topen relative test"},
+    ["<leader>rtf"] = {
+      function()
+        require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand("%"), "vertical")
+      end,
+      "test file"
+    },
+    ["<leader>rtn"] = {
+      function()
+        require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand("%") .. ":" .. vim.fn.line("."), "vertical")
+      end,
+      "test nearest"
+    }
   },
 }
 
