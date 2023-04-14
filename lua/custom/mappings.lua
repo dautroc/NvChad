@@ -5,16 +5,16 @@ M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<C-f>"] = { ":lua require('zen-mode').toggle({ window = { width = .5 }})<CR>", "focus window" },
-    ["<leader>w"] = { ":w<cr>", "write" },
-    ["<leader>q"] = { ":q<cr>", "quit" },
-    ["<leader>Q"] = { ":qa<cr>", "quit all" },
+    ["<leader>w"] = { ":w<CR>", "write" },
+    ["<leader>q"] = { ":q<CR>", "quit" },
+    ["<leader>Q"] = { ":qa<CR>", "quit all" },
     ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
 
     -- vim tab navigation
-    ["tt"] = { ":tabclose<cr>", "tab close", opts = { nowait = true } },
-    ["tn"] = { ":tabnew<cr>", "tab new", opts = { nowait = true } },
-    ["tk"] = { ":tabnext<cr>", "tab next", opts = { nowait = true } },
-    ["tj"] = { ":tabprev<cr>", "tab prev", opts = { nowait = true } },
+    ["tt"] = { ":tabclose<CR>", "tab close", opts = { nowait = true } },
+    ["tn"] = { ":tabnew<CR>", "tab new", opts = { nowait = true } },
+    ["tk"] = { ":tabnext<CR>", "tab next", opts = { nowait = true } },
+    ["tj"] = { ":tabprev<CR>", "tab prev", opts = { nowait = true } },
 
     -- keep cursor in the middle of the screen
     ["n"] = { "nzzzv" },
@@ -40,14 +40,14 @@ M.general = {
 M.hop = {
   n = {
     ["f"] = {
-      ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<cr>",
+      ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>",
       "find current line forward",
     },
     ["F"] = {
-      ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>",
+      ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
       "find current line backward",
     },
-    ["s"] = { ":HopChar2<cr>", "find word" },
+    ["s"] = { ":HopChar2<CR>", "find word" },
   },
 }
 
@@ -85,9 +85,9 @@ M.rails = {
     ["<leader>rl"] = { ":Telescope find_files cwd=app/locales<CR>", "rails locales" },
 
     -- group test
-    ["<leader>rta"] = { ":A<cr>", "open relative test"},
-    ["<leader>rtv"] = { ":AV<cr>", "vopen relative test"},
-    ["<leader>rtt"] = { ":AT<cr>", "topen relative test"},
+    ["<leader>rta"] = { ":A<CR>", "open relative test"},
+    ["<leader>rtv"] = { ":AV<CR>", "vopen relative test"},
+    ["<leader>rtt"] = { ":AT<CR>", "topen relative test"},
   },
 }
 
