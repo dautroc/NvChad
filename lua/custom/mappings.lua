@@ -4,7 +4,8 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<leader>s"] = { ":w<cr>", "write" },
+    ["<C-f>"] = { ":lua require('zen-mode').toggle({ window = { width = .5 }})<CR>", "focus window" },
+    ["<leader>w"] = { ":w<cr>", "write" },
     ["<leader>q"] = { ":q<cr>", "quit" },
     ["<leader>Q"] = { ":qa<cr>", "quit all" },
     ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
@@ -19,6 +20,21 @@ M.general = {
     ["n"] = { "nzzzv" },
     ["N"] = { "Nzzzv"},
   },
+  i = {
+    ---- Undo break points
+    ["_"] ={ "_<C-g>u" },
+    [","] ={ ",<C-g>u" },
+    ["."] ={ ".<C-g>u" },
+    ["!"] ={ "!<C-g>u" },
+    ["?"] ={ "?<C-g>u" },
+    ["["] ={ "[<C-g>u" },
+    ["]"] ={ "]<C-g>u" },
+    ["{"] ={ "{<C-g>u" },
+    ["}"] ={ "}<C-g>u" },
+    ["("] ={ "(<C-g>u" },
+    [")"] ={ ")<C-g>u" },
+    [" "] ={ " <C-g>u" },
+  }
 }
 
 M.hop = {
