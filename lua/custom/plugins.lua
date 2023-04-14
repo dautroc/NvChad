@@ -80,7 +80,7 @@ local plugins = {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-        require("nvim-surround").setup()
+      require("nvim-surround").setup()
     end
   },
 
@@ -112,8 +112,10 @@ local plugins = {
     dependencies = { "copilot.lua" },
     config = function()
       require("copilot_cmp").setup()
-    end
+    end,
   },
+
+  { "kdheepak/lazygit.nvim", event = "VeryLazy" },
 
   -- To make a plugin not be loaded
   -- {

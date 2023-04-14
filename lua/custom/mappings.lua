@@ -4,10 +4,20 @@ local M = {}
 M.disabled = {
   n = {
     ["<leader>w"] = "",
-    ["<leader>p"] = "",
-    ["<leader>t"] = "",
-    ["<leader>c"] = "",
+
+    ["<leader>ph"] = "",
+    ["<leader>pt"] = "",
+
+    ["<leader>td"] = "",
+    ["<leader>th"] = "",
+
+    ["<leader>ca"] = "",
+    ["<leader>ch"] = "",
+    ["<leader>cm"] = "",
+    ["<leader>cc"] = "",
+
     ["<leader>b"] = "",
+    ["<leader>gt"] = "",
     ["<C-a>"] = "",
   },
 }
@@ -113,6 +123,15 @@ M.buffers = {
 M.misc = {
   n = {
     ["<leader>mt"] = { ":Telescope themes<CR>", "themes" },
+  },
+}
+
+M.git = {
+  n = {
+    ["<leader>gg"] = { ":LazyGit<CR>", "lazygit" },
+    ["<leader>gf"] = { ":LazyGitFilterCurrentFile<CR>", "lazygit filter current file" },
+    ["<leader>gs"] = { ":Telescope git_status <CR>", "git status" },
+    ["<leader>gc"] = { ":Telescope git_commits <CR>", "git commits" },
   },
 }
 
