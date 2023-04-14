@@ -149,4 +149,29 @@ M.git = {
   },
 }
 
+M.nvterm = {
+  n = {
+    ["<leader>tf"] = {
+      function()
+        require("nvterm.terminal").new "float"
+      end,
+      "new float term",
+    },
+
+    ["<leader>th"] = {
+      function()
+        require("nvterm.terminal").new "horizontal"
+      end,
+      "new horizontal term",
+    },
+
+    ["<leader>tv"] = {
+      function()
+        require("nvterm.terminal").new "vertical"
+      end,
+      "new vertical term",
+    },
+  },
+}
+
 return M
