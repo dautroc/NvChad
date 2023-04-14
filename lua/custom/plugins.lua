@@ -91,6 +91,30 @@ local plugins = {
     end
   },
 
+  {
+    "roobert/search-replace.nvim",
+    config = function()
+      require('search-replace').setup()
+    end
+  },
+
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("custom.configs.copilot")
+    end,
+  },
+
+  {
+    "zbirenbaum/copilot-cmp",
+    dependencies = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
