@@ -128,10 +128,9 @@ local plugins = {
 
   -- To make a plugin not be loaded
   -- {
-  --   "NvChad/nvim-colorizer.lua",
+  --   "NvChad/nvterm",
   --   enabled = false
   -- },
-
 }
 
 return plugins
