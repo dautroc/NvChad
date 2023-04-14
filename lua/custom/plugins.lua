@@ -75,6 +75,21 @@ local plugins = {
 
   { "tpope/vim-projectionist" },
 
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup()
+    end
+  },
+
+  {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup {}
+    end
+  },
 
   -- To make a plugin not be loaded
   -- {
