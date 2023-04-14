@@ -136,6 +136,7 @@ M.buffers = {
 M.misc = {
   n = {
     ["<leader>mt"] = { ":Telescope themes<CR>", "themes" },
+    ["<leader>mc"] = { ":edit ~/.config/nvim/lua/custom/mappings.lua<CR>", "edit config nvim" },
   },
 }
 
@@ -146,6 +147,12 @@ M.git = {
     ["<leader>gs"] = { ":Telescope git_status <CR>", "git status" },
     ["<leader>gc"] = { ":Telescope git_commits <CR>", "git commits" },
   },
+}
+
+M.toggleterm = {
+  n = {
+    ["<leader>tv"] = { "", "" }
+  }
 }
 
 return M
