@@ -73,7 +73,7 @@ local plugins = {
     opts = overrides.nvterm,
   },
 
-  { "tpope/vim-projectionist" },
+  { "tpope/vim-projectionist", event = "VeryLazy" },
 
   {
     "kylechui/nvim-surround",
