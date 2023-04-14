@@ -117,15 +117,6 @@ local plugins = {
 
   { "kdheepak/lazygit.nvim", event = "VeryLazy" },
 
-  {
-    "akinsho/toggleterm.nvim",
-    event = "VeryLazy",
-    version = "*",
-    config = function ()
-      require("custom.configs.toggleterm")
-    end
-  },
-
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvterm",

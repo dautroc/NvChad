@@ -149,10 +149,4 @@ M.git = {
   },
 }
 
-M.toggleterm = {
-  n = {
-    ["<leader>tv"] = { "", "" }
-  }
-}
-
 return M
