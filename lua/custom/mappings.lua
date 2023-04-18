@@ -14,7 +14,12 @@ M.disabled = {
     ["<leader>cm"] = "",
     ["<leader>cc"] = "",
 
-    ["<leader>w"] = "",
+    ["<leader>wr"] = "",
+    ["<leader>wa"] = "",
+    ["<leader>wk"] = "",
+    ["<leader>wK"] = "",
+    ["<leader>wl"] = "",
+
     ["<leader>b"] = "",
     ["<leader>h"] = "",
     ["<leader>v"] = "",
@@ -106,8 +111,8 @@ M.rails = {
     ["<leader>ra"] = { ":Telescope find_files cwd=app/api<CR>", "rails api" },
     ["<leader>rp"] = { ":Telescope find_files cwd=app/policies<CR>", "rails policies" },
     ["<leader>ri"] = { ":Telescope find_files cwd=app/mailers<CR>", "rails mailer" },
-    ["<leader>rf"] = { ":Telescope find_files cwd=app/factories<CR>", "rails factories" },
-    ["<leader>rl"] = { ":Telescope find_files cwd=app/locales<CR>", "rails locales" },
+    ["<leader>rf"] = { ":Telescope find_files cwd=spec/factories<CR>", "rails factories" },
+    ["<leader>rl"] = { ":Telescope find_files cwd=config/locales<CR>", "rails locales" },
 
     -- group test
     ["<leader>rta"] = { ":A<CR>", "open relative test"},
