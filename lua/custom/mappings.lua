@@ -34,7 +34,7 @@ M.general = {
     ["<C-f>"] = { ":lua require('zen-mode').toggle({ window = { width = .5 }})<CR>", "focus window" },
     ["<C-v>"] = { "<C-w>v", "vsplit window" },
     ["<C-x>"] = { "<C-w>s", "hsplit window" },
-    ["<tab>"] = { ":b#<CR>", "last buffer" },
+    ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
     ["<leader>w"] = { ":w<CR>", "write" },
     ["<leader>q"] = { ":q<CR>", "quit" },
     ["<leader>Q"] = { ":qa<CR>", "quit all" },
