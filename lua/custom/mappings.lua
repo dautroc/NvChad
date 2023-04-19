@@ -66,6 +66,10 @@ M.general = {
     ["("] = { "(<C-g>u" },
     [")"] = { ")<C-g>u" },
     [" "] = { " <C-g>u" },
+  },
+  v = {
+    ["H"] = { "^", "go to end of current line", opts = { nowait = true } },
+    ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
   }
 }
 
