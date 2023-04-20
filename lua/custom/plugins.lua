@@ -1,9 +1,6 @@
 local overrides = require("custom.configs.overrides")
 
----@type NvPluginSpec[]
 local plugins = {
-
-  -- Override plugin definition options
 
   {
     "neovim/nvim-lspconfig",
@@ -22,7 +19,6 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
 
-  -- override plugin configs
   {
     "williamboman/mason.nvim",
     opts = overrides.mason
@@ -38,7 +34,6 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- Install a plugin
   {
     "max397574/better-escape.nvim",
     event = "InsertEnter",

@@ -32,6 +32,7 @@ M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["H"] = { "^", "go to end of current line", opts = { nowait = true } },
+    ["J"] = { "Jx", "join lines", opts = { nowait = true } },
     ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
     ["<C-f>"] = { ":lua require('zen-mode').toggle({ window = { width = .5 }})<CR>", "focus window" },
     ["<C-v>"] = { "<C-w>v", "vsplit window" },
