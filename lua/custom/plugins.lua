@@ -114,6 +114,9 @@ local plugins = {
 
   { "tiagovla/scope.nvim", event = "VeryLazy" }, -- Using tab
 
+  { "tpope/vim-fugitive", event = "VeryLazy" },
+
+  { "tpope/vim-rhubarb", event = "VeryLazy" },
 
   -- To make a plugin not be loaded
   -- {

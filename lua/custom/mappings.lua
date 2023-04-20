@@ -160,7 +160,11 @@ M.git = {
     ["<leader>gf"] = { ":LazyGitFilterCurrentFile<CR>", "lazygit filter current file" },
     ["<leader>gs"] = { ":Telescope git_status <CR>", "git status" },
     ["<leader>gc"] = { ":Telescope git_commits <CR>", "git commits" },
+    ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },
   },
+  v = {
+    ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },
+  }
 }
 
 M.nvterm = {
