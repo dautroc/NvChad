@@ -112,6 +112,9 @@ local plugins = {
 
   { "kdheepak/lazygit.nvim", event = "VeryLazy" },
 
+  { "tiagovla/scope.nvim", event = "VeryLazy" }, -- Using tab
+
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvterm",
