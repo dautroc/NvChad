@@ -160,6 +160,7 @@ local plugins = {
     config = function()
       require("tidy").setup({
         filetype_exclude = { "markdown", "diff" },
+        mappings = {}
       })
     end,
   },
