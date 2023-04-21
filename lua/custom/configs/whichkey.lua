@@ -16,6 +16,10 @@ wk.register(
         p = { name = "+pull request" },
       },
       b = { name = "+buffers" },
+      o = {
+        name = "+obsidian",
+        l = { name = "+links" },
+      },
       r = {
         name = "+rails",
         t = { name = "+tests" },
