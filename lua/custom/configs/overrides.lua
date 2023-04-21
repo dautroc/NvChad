@@ -67,7 +67,7 @@ M.telescope = {
       },
     },
   },
-  extensions_list = { "advanced_git_search" },
+  extensions_list = { "themes", "terms", "advanced_git_search" },
 }
 
 M.nvterm = {
