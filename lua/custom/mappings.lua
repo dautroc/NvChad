@@ -161,6 +161,7 @@ M.git = {
     ["<leader>gs"] = { ":Telescope git_status <CR>", "git status" },
     ["<leader>gc"] = { ":Telescope git_commits <CR>", "git commits" },
     ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },
+    ["<leader>gb"] = { ":Git blame<CR>", "blame" },
   },
   v = {
     ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },
