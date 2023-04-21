@@ -162,6 +162,11 @@ M.git = {
     ["<leader>gc"] = { ":Telescope git_commits <CR>", "git commits" },
     ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },
     ["<leader>gb"] = { ":Git blame<CR>", "blame" },
+
+    -- Pull requests
+    ["<leader>gps"] = { ":Octo pr search<CR>", "search pull requests" },
+    ["<leader>gpo"] = { ":Octo pr browser<CR>", "open pull request" },
+    ["<leader>gpc"] = { ":Octo pr checkout<CR>", "open pull request" },
   },
   v = {
     ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },

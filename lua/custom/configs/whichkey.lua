@@ -11,7 +11,10 @@ wk.register(
       f = { name = "+find" },
       m = { name = "+misc" },
       l = { name = "+lsp" },
-      g = { name = "+git" },
+      g = {
+        name = "+git",
+        p = { name = "+pull request" },
+      },
       b = { name = "+buffers" },
       r = {
         name = "+rails",

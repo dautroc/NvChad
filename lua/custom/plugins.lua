@@ -146,6 +146,24 @@ local plugins = {
     end,
   },
 
+  {
+    "pwntester/octo.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("octo").setup()
+    end,
+  },
+
+  {
+    "mcauley-penney/tidy.nvim",
+    event = "BufWritePre",
+    config = function()
+      require("tidy").setup({
+        filetype_exclude = { "markdown", "diff" },
+      })
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvterm",
