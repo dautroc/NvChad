@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 local plugins = {
 
@@ -21,7 +21,7 @@ local plugins = {
 
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -38,7 +38,7 @@ local plugins = {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
     config = function()
-      require("better_escape").setup( { clear_empty_lines = true })
+      require("better_escape").setup { clear_empty_lines = true }
     end,
   },
 
@@ -76,21 +76,21 @@ local plugins = {
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup()
-    end
+    end,
   },
 
   {
     "folke/zen-mode.nvim",
     config = function()
       require("zen-mode").setup {}
-    end
+    end,
   },
 
   {
     "roobert/search-replace.nvim",
     config = function()
-      require('search-replace').setup()
-    end
+      require("search-replace").setup()
+    end,
   },
 
   {
@@ -98,7 +98,7 @@ local plugins = {
     cmd = "Copilot",
     event = "InsertEnter",
     config = function()
-      require("custom.configs.copilot")
+      require "custom.configs.copilot"
     end,
   },
 
@@ -117,6 +117,34 @@ local plugins = {
   { "tpope/vim-fugitive", event = "VeryLazy" },
 
   { "tpope/vim-rhubarb", event = "VeryLazy" },
+
+  {
+    "epwalsh/obsidian.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("obsidian").setup {
+        dir = "~/Dropbox/obsidian",
+        note_id_func = function(title)
+          -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
+          local suffix = ""
+          if title ~= nil then
+            -- If title is given, transform it into valid file name.
+            suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+          else
+            -- If title is nil, just add 4 random uppercase letters to the suffix.
+            for _ = 1, 4 do
+              suffix = suffix .. string.char(math.random(65, 90))
+            end
+          end
+          return tostring(os.time()) .. "-" .. suffix
+        end,
+        notes_subdir = "notes",
+        daily_notes = {
+          folder = "dailies",
+        },
+      }
+    end,
+  },
 
   -- To make a plugin not be loaded
   -- {

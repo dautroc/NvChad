@@ -193,4 +193,35 @@ M.nvterm = {
   },
 }
 
+M.obsidian = {
+  n = {
+    ["<leader>ot"] = { ":ObsidianToday<CR>" },
+    ["<leader>oy"] = { ":ObsidianYesterday<CR>" },
+    ["<leader>ob"] = { ":ObsidianBacklinks<CR>" },
+    ["<leader>oo"] = { ":ObsidianOpen<CR>" },
+    ["<leader>on"] = { ":ObsidianNew<CR>" },
+    ["<leader>os"] = { ":ObsidianSearch<CR>" },
+    ["<leader>of"] = { ":ObsidianQuickSwitch<CR>" },
+
+    -- Obsidian Link
+    ["<leader>oll"] = { ":ObsidianLink " },
+    ["<leader>oln"] = { ":ObsidianLinkNew<CR>" },
+    ["<leader>olf"] = { ":ObsidianFollowLink<CR>" },
+  },
+  v = {
+    ["<leader>ot"] = { ":ObsidianToday<CR>" },
+    ["<leader>oy"] = { ":ObsidianYesterday<CR>" },
+    ["<leader>ob"] = { ":ObsidianBacklinks<CR>" },
+    ["<leader>oo"] = { ":ObsidianOpen<CR>" },
+    ["<leader>on"] = { ":ObsidianNew<CR>" },
+    ["<leader>os"] = { ":ObsidianSearch<CR>" },
+    ["<leader>of"] = { ":ObsidianQuickSwitch<CR>" },
+
+    -- Obsidian Link
+    ["<leader>oll"] = { ":ObsidianLink " },
+    ["<leader>oln"] = { ":ObsidianLinkNew<CR>" },
+    ["<leader>olf"] = { ":ObsidianFollowLink<CR>" },
+  },
+}
+
 return M
