@@ -39,7 +39,8 @@ M.general = {
     ["<C-x>"] = { "<C-w>s", "hsplit window" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
     ["<leader>w"] = { ":w<CR>", "write" },
-    ["<leader>q"] = { ":qa<CR>", "quit all" },
+    ["<leader>q"] = { ":q<CR>", "quit" },
+    ["<leader>x"] = { ":qa<CR>", "quit all" },
     ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
 
     -- vim tab navigation
@@ -156,8 +157,8 @@ M.misc = {
 M.git = {
   n = {
     ["<leader>gg"] = { ":LazyGit<CR>", "lazygit" },
-    ["<leader>gf"] = { ":LazyGitFilterCurrentFile<CR>", "lazygit filter current file" },
-    ["<leader>gs"] = { ":Telescope git_status <CR>", "git status" },
+    ["<leader>gf"] = { ":LazyGitFilterCurrentFile<CR>", "Lazygit filter current file" },
+    ["<leader>gs"] = { ":AdvancedGitSearch<CR>", "git advanced search" },
     ["<leader>gc"] = { ":Telescope git_commits <CR>", "git commits" },
     ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },
     ["<leader>gb"] = { ":Git blame<CR>", "blame" },
