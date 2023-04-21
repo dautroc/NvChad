@@ -8,14 +8,15 @@ end
 wk.register(
   {
     ["<leader>"] = {
+      b = { name = "+buffers" },
       f = { name = "+find" },
       m = { name = "+misc" },
       l = { name = "+lsp" },
+      t = { name = "+term" },
       g = {
         name = "+git",
         p = { name = "+pull request" },
       },
-      b = { name = "+buffers" },
       o = {
         name = "+obsidian",
         l = { name = "+links" },
