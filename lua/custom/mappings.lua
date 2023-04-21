@@ -39,8 +39,7 @@ M.general = {
     ["<C-x>"] = { "<C-w>s", "hsplit window" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
     ["<leader>w"] = { ":w<CR>", "write" },
-    ["<leader>q"] = { ":q<CR>", "quit" },
-    ["<leader>Q"] = { ":qa<CR>", "quit all" },
+    ["<leader>q"] = { ":qa<CR>", "quit all" },
     ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
 
     -- vim tab navigation

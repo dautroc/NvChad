@@ -158,11 +158,16 @@ local plugins = {
     "mcauley-penney/tidy.nvim",
     event = "BufWritePre",
     config = function()
-      require("tidy").setup({
+      require("tidy").setup {
         filetype_exclude = { "markdown", "diff" },
-        mappings = {}
-      })
+        mappings = {},
+      }
     end,
+  },
+
+  {
+    "aaronhallaert/advanced-git-search.nvim",
+    event = "VeryLazy",
   },
 
   -- To make a plugin not be loaded
