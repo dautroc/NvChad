@@ -34,13 +34,15 @@ M.general = {
     ["H"] = { "^", "go to end of current line", opts = { nowait = true } },
     ["J"] = { "Jx", "join lines", opts = { nowait = true } },
     ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
+
     ["<C-f>"] = { ":lua require('zen-mode').toggle({ window = { width = .5 }})<CR>", "focus window" },
     ["<C-v>"] = { "<C-w>v", "vsplit window" },
     ["<C-x>"] = { "<C-w>s", "hsplit window" },
-    ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
+
     ["<leader>w"] = { ":w<CR>", "write" },
     ["<leader>q"] = { ":q<CR>", "quit" },
-    ["<leader>x"] = { ":qa<CR>", "quit all" },
+    ["<leader>Q"] = { ":qa<CR>", "quit all" },
+    ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
     ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
 
     -- vim tab navigation
