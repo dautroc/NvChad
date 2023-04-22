@@ -40,8 +40,8 @@ M.general = {
     ["<C-x>"] = { "<C-w>s", "hsplit window" },
 
     ["<leader>w"] = { ":w<CR>", "write" },
-    ["<leader>q"] = { ":q<CR>", "quit" },
-    ["<leader>Q"] = { ":qa<CR>", "quit all" },
+    ["<leader>q"] = { "<leader>x", "close buffer" },
+    ["<leader>Q"] = { ":qa<CR>", "quit nvim" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
 
     -- vim tab navigation
