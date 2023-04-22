@@ -23,6 +23,7 @@ M.disabled = {
     ["<leader>b"] = "",
     ["<leader>h"] = "",
     ["<leader>v"] = "",
+    ["<leader>x"] = "",
     ["<leader>gt"] = "",
     ["<C-a>"] = "",
   },
@@ -40,7 +41,7 @@ M.general = {
     ["<C-x>"] = { "<C-w>s", "hsplit window" },
 
     ["<leader>w"] = { ":w<CR>", "write" },
-    ["<leader>q"] = { "<leader>x", "close buffer" },
+    ["<leader>q"] = { ":q", "close buffer" },
     ["<leader>Q"] = { ":qa<CR>", "quit nvim" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
 
