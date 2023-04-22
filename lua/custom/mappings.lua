@@ -23,7 +23,6 @@ M.disabled = {
     ["<leader>b"] = "",
     ["<leader>h"] = "",
     ["<leader>v"] = "",
-    ["<leader>x"] = "",
     ["<leader>gt"] = "",
     ["<C-a>"] = "",
   },
@@ -41,7 +40,7 @@ M.general = {
     ["<C-x>"] = { "<C-w>s", "hsplit window" },
 
     ["<leader>w"] = { ":w<CR>", "write" },
-    ["<leader>q"] = { ":q", "close buffer" },
+    ["<leader>q"] = { ":q<CR>", "quit buffer" },
     ["<leader>Q"] = { ":qa<CR>", "quit nvim" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
 
@@ -153,7 +152,8 @@ M.buffers = {
 
 M.misc = {
   n = {
-    ["<leader>mt"] = { ":Telescope themes<CR>", "themes" },
+    ["<leader>mt"] = { ":Telescope themes<CR>", "find themes" },
+    ["<leader>mm"] = { ":lua require('base46').toggle_theme()<CR>", "toggle theme" },
     ["<leader>mc"] = { ":edit ~/.config/nvim/lua/custom/mappings.lua<CR>", "edit config nvim" },
   },
 }
