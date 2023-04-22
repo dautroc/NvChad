@@ -43,7 +43,6 @@ M.general = {
     ["<leader>q"] = { ":q<CR>", "quit" },
     ["<leader>Q"] = { ":qa<CR>", "quit all" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
-    ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
 
     -- vim tab navigation
     ["tt"] = { ":tabclose<CR>", "tab close", opts = { nowait = true } },
@@ -109,6 +108,8 @@ M.telescope = {
     ["<leader>ft"] = { ":Telescope terms<CR>", "find terms" },
     ["<leader>fk"] = { ":Telescope keymaps<CR>", "find keymaps" },
     ["<leader>fl"] = { ":Telescope resume<CR>", "last find" },
+    ["<leader>p"] = { ":Telescope project<CR>", "find project" },
+    ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
   },
 }
 

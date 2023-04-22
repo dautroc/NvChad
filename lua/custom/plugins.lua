@@ -170,6 +170,11 @@ local plugins = {
     event = "VeryLazy",
   },
 
+  {
+    "nvim-telescope/telescope-project.nvim",
+    event = "VeryLazy",
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvterm",
