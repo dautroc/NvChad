@@ -26,6 +26,9 @@ M.ui = {
   },
 
   cheatsheet = { theme = "simple" },
+  tabufline = {
+    enabled = false,
+  }
 }
 
 M.plugins = "custom.plugins"

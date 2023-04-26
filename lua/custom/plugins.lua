@@ -51,7 +51,7 @@ local plugins = {
     "phaazon/hop.nvim",
     event = "BufRead",
     config = function()
-      require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
+      require("hop").setup { keys = "asdferhjklyu" }
     end,
   },
 
