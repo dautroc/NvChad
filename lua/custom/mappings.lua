@@ -39,6 +39,7 @@ M.general = {
     ["<C-v>"] = { "<C-w>v", "vsplit window" },
     ["<C-x>"] = { "<C-w>s", "hsplit window" },
 
+    ["<leader>h"] = { ":noh<CR>", "clear highlight" },
     ["<leader>w"] = { ":w<CR>", "write" },
     ["<leader>q"] = { ":q<CR>", "quit buffer" },
     ["<leader>Q"] = { ":qa<CR>", "quit nvim" },
@@ -100,7 +101,8 @@ M.lspconfig = {
       end,
       "format",
     },
-    ["<leader>ls"] = { ":SymbolsOutline<CR>", "symbol toggle"}
+    ["<leader>ls"] = { ":SymbolsOutline<CR>", "symbol toggle"},
+    ["<leader>lh"] = { ":lua vim.diagnostic.hide()<CR>", "hide diagnostic"}
   },
 }
 
