@@ -100,6 +100,7 @@ M.lspconfig = {
       end,
       "format",
     },
+    ["<leader>ls"] = { ":SymbolsOutline<CR>", "symbol toggle"}
   },
 }
 
@@ -154,7 +155,6 @@ M.misc = {
   n = {
     ["<leader>mt"] = { ":Telescope themes<CR>", "find themes" },
     ["<leader>mm"] = { ":lua require('base46').toggle_theme()<CR>", "toggle theme" },
-    ["<leader>mc"] = { ":edit ~/.config/nvim/lua/custom/mappings.lua<CR>", "edit config nvim" },
   },
 }
 

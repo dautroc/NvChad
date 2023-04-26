@@ -175,6 +175,28 @@ local plugins = {
     event = "VeryLazy",
   },
 
+  {
+    "utilyre/barbecue.nvim",
+    event = "VeryLazy",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+      -- configurations go here
+    },
+  },
+
+  {
+    "simrat39/symbols-outline.nvim",
+    event = "BufRead",
+    config = function()
+      require("symbols-outline").setup()
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvterm",
