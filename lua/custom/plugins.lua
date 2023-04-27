@@ -197,6 +197,14 @@ local plugins = {
     end,
   },
 
+  {
+    "gbprod/yanky.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("yanky").setup()
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvterm",

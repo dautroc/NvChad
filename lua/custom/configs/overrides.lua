@@ -73,7 +73,7 @@ M.telescope = {
       },
     },
   },
-  extensions_list = { "themes", "terms", "advanced_git_search", "project" },
+  extensions_list = { "themes", "terms", "advanced_git_search", "project", "yank_history" },
   extensions = {
     project = {
       base_dirs = {

@@ -78,15 +78,15 @@ M.general = {
 
 M.hop = {
   n = {
-    ["f"] = {
-      ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>",
-      "find current line forward",
-    },
-    ["F"] = {
-      ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
-      "find current line backward",
-    },
-    ["<tab>"] = { ":HopChar2<CR>", "find word" },
+    -- ["f"] = {
+    --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>",
+    --   "find current line forward",
+    -- },
+    -- ["F"] = {
+    --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
+    --   "find current line backward",
+    -- },
+    ["f"] = { ":HopChar2<CR>", "find word" },
   },
 }
 
@@ -111,6 +111,7 @@ M.telescope = {
     ["<leader>ft"] = { ":Telescope terms<CR>", "find terms" },
     ["<leader>fk"] = { ":Telescope keymaps<CR>", "find keymaps" },
     ["<leader>fl"] = { ":Telescope resume<CR>", "last find" },
+    ["<leader>fy"] = { ":Telescope yank_history<CR>", "yank history" },
     ["<leader>p"] = { ":Telescope project<CR>", "find project" },
     ["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "find files" },
   },
@@ -229,6 +230,24 @@ M.obsidian = {
     ["<leader>oll"] = { ":ObsidianLink " },
     ["<leader>oln"] = { ":ObsidianLinkNew<CR>" },
     ["<leader>olf"] = { ":ObsidianFollowLink<CR>" },
+  },
+}
+
+M.yanky = {
+  n = {
+    ["<C-n>"] = { "<Plug>(YankyCycleForward)" },
+    ["<C-p>"] = { "<Plug>(YankyCycleBackward)" },
+
+    ["p"] = { "<Plug>(YankyPutAfter)"},
+    ["P"] = { "<Plug>(YankyPutBefore)"},
+    ["gp"] = { "<Plug>(YankyGPutAfter)"},
+    ["gP"] = { "<Plug>(YankyGPutBefore)"},
+  },
+  x = {
+    ["p"] = { "<Plug>(YankyPutAfter)" },
+    ["P"] = { "<Plug>(YankyPutBefore)" },
+    ["gp"] = { "<Plug>(YankyGPutAfter)" },
+    ["gP"] = { "<Plug>(YankyGPutBefore)" },
   },
 }
 
