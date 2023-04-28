@@ -41,8 +41,9 @@ M.general = {
 
     ["<leader>h"] = { ":noh<CR>", "clear highlight" },
     ["<leader>w"] = { ":w<CR>", "write" },
-    ["<leader>q"] = { ":q<CR>", "quit buffer" },
-    ["<leader>Q"] = { ":qa<CR>", "quit nvim" },
+
+    ["<leader>q"] = { ":lua require('custom.functions').smart_quit()<CR>", "quit buffer" },
+    ["<leader>Q"] = { ":lua require('custom.functions').smart_quit('all')<CR>", "quit nvim" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
 
     -- vim tab navigation
@@ -78,15 +79,15 @@ M.general = {
 
 M.hop = {
   n = {
-    ["f"] = {
-      ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>",
-      "find current line forward",
-    },
-    ["F"] = {
-      ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
-      "find current line backward",
-    },
-    ["<tab>"] = { ":HopChar2<CR>", "find word" },
+    -- ["f"] = {
+    --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>",
+    --   "find current line forward",
+    -- },
+    -- ["F"] = {
+    --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
+    --   "find current line backward",
+    -- },
+    ["f"] = { ":HopChar2<CR>", "find word" },
   },
 }
 
@@ -118,6 +119,15 @@ M.telescope = {
   },
 }
 
+M.projectionist = {
+  n = {
+    ["<leader>aa"] = { ":A<CR>", "open relative file" },
+    ["<leader>av"] = { ":AV<CR>", "vopen relative file" },
+    ["<leader>at"] = { ":AT<CR>", "topen relative file" },
+    ["<leader>as"] = { ":AS<CR>", "sopen relative file" },
+  },
+}
+
 M.rails = {
   n = {
     ["<leader>rm"] = { ":Telescope find_files cwd=app/models<CR>", "rails models" },
@@ -130,10 +140,6 @@ M.rails = {
     ["<leader>rl"] = { ":Telescope find_files cwd=config/locales<CR>", "rails locales" },
     ["<leader>rr"] = { ":Telescope find_files cwd=lib/tasks<CR>", "rake tasks" },
 
-    -- group test
-    ["<leader>rta"] = { ":A<CR>", "open relative test"},
-    ["<leader>rtv"] = { ":AV<CR>", "vopen relative test"},
-    ["<leader>rtt"] = { ":AT<CR>", "topen relative test"},
     ["<leader>rtf"] = {
       function()
         require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand("%"), "vertical")
