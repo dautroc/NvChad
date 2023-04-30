@@ -45,6 +45,7 @@ M.general = {
     ["<leader>q"] = { ":lua require('custom.functions').smart_quit()<CR>", "quit buffer" },
     ["<leader>Q"] = { ":lua require('custom.functions').smart_quit('all')<CR>", "quit nvim" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
+    ["<tab>"] = { ":b#<CR>", "last buffer" },
 
     -- vim tab navigation
     -- ["tt"] = { ":tabclose<CR>", "tab close", opts = { nowait = true } },
