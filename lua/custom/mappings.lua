@@ -36,8 +36,6 @@ M.general = {
     ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
 
     ["<C-f>"] = { ":lua require('zen-mode').toggle({ window = { width = .5 }})<CR>", "focus window" },
-    ["<C-v>"] = { "<C-w>v", "vsplit window" },
-    ["<C-x>"] = { "<C-w>s", "hsplit window" },
 
     ["<leader>h"] = { ":noh<CR>", "clear highlight" },
     ["<leader>w"] = { ":w<CR>", "write" },
