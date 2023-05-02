@@ -30,6 +30,11 @@ M.disabled = {
 
 M.general = {
   n = {
+    ["<C-h>"] = { "<cmd>lua require('tmux').move_left()<cr>" },
+    ["<C-j>"] = { "<cmd>lua require('tmux').move_down()<cr>" },
+    ["<C-k>"] = { "<cmd>lua require('tmux').move_up()<cr>" },
+    ["<C-l>"] = { "<cmd>lua require('tmux').move_right()<cr>" },
+
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["H"] = { "^", "go to end of current line", opts = { nowait = true } },
     ["J"] = { "Jx", "join lines", opts = { nowait = true } },
