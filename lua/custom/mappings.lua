@@ -52,7 +52,7 @@ M.general = {
 
     -- keep cursor in the middle of the screen
     ["n"] = { "nzzzv" },
-    ["N"] = { "Nzzzv"},
+    ["N"] = { "Nzzzv" },
   },
   i = {
     ---- Undo break points
@@ -72,7 +72,7 @@ M.general = {
   v = {
     ["H"] = { "^", "go to end of current line", opts = { nowait = true } },
     ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
-  }
+  },
 }
 
 M.hop = {
@@ -89,6 +89,33 @@ M.hop = {
   },
 }
 
+M.tabufline = {
+  n = {
+    -- cycle through buffers
+    ["tk"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflineNext()
+      end,
+      "goto next buffer",
+    },
+
+    ["tj"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflinePrev()
+      end,
+      "goto prev buffer",
+    },
+
+    -- close buffer + hide terminal buffer
+    ["<leader>x"] = {
+      function()
+        require("nvchad_ui.tabufline").close_buffer()
+      end,
+      "close buffer",
+    },
+  },
+}
+
 M.lspconfig = {
   n = {
     ["<leader>lq"] = { vim.diagnostic.setloclist, "diagnostic setloclist" },
@@ -100,8 +127,8 @@ M.lspconfig = {
       end,
       "format",
     },
-    ["<leader>ls"] = { ":SymbolsOutline<CR>", "symbol toggle"},
-    ["<leader>lh"] = { ":lua vim.diagnostic.hide()<CR>", "hide diagnostic"}
+    ["<leader>ls"] = { ":SymbolsOutline<CR>", "symbol toggle" },
+    ["<leader>lh"] = { ":lua vim.diagnostic.hide()<CR>", "hide diagnostic" },
   },
 }
 
@@ -140,23 +167,23 @@ M.rails = {
 
     ["<leader>rtf"] = {
       function()
-        require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand("%"), "vertical")
+        require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand "%", "vertical")
       end,
-      "test file"
+      "test file",
     },
     ["<leader>rtn"] = {
       function()
-        require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand("%") .. ":" .. vim.fn.line("."), "vertical")
+        require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand "%" .. ":" .. vim.fn.line ".", "vertical")
       end,
-      "test nearest"
-    }
+      "test nearest",
+    },
   },
 }
 
 M.buffers = {
   n = {
     ["<leader>by"] = { ":let @+ = expand('%')<CR>", "yank buffer path" },
-    ["<leader>bY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>","yank buffer path with line number" },
+    ["<leader>bY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>", "yank buffer path with line number" },
   },
 }
 
@@ -179,7 +206,7 @@ M.git = {
   },
   v = {
     ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },
-  }
+  },
 }
 
 -- M.nvterm = {
@@ -243,10 +270,10 @@ M.yanky = {
     ["<C-n>"] = { "<Plug>(YankyCycleForward)" },
     ["<C-p>"] = { "<Plug>(YankyCycleBackward)" },
 
-    ["p"] = { "<Plug>(YankyPutAfter)"},
-    ["P"] = { "<Plug>(YankyPutBefore)"},
-    ["gp"] = { "<Plug>(YankyGPutAfter)"},
-    ["gP"] = { "<Plug>(YankyGPutBefore)"},
+    ["p"] = { "<Plug>(YankyPutAfter)" },
+    ["P"] = { "<Plug>(YankyPutBefore)" },
+    ["gp"] = { "<Plug>(YankyGPutAfter)" },
+    ["gP"] = { "<Plug>(YankyGPutBefore)" },
   },
   x = {
     ["p"] = { "<Plug>(YankyPutAfter)" },
