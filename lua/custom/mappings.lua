@@ -48,13 +48,6 @@ M.general = {
     ["<leader>q"] = { ":lua require('custom.functions').smart_quit()<CR>", "quit buffer" },
     ["<leader>Q"] = { ":lua require('custom.functions').smart_quit('all')<CR>", "quit nvim" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
-    ["<tab>"] = { ":b#<CR>", "last buffer" },
-
-    -- vim tab navigation
-    -- ["tt"] = { ":tabclose<CR>", "tab close", opts = { nowait = true } },
-    -- ["tn"] = { ":tabnew<CR>", "tab new", opts = { nowait = true } },
-    -- ["tk"] = { ":tabnext<CR>", "tab next", opts = { nowait = true } },
-    -- ["tj"] = { ":tabprev<CR>", "tab prev", opts = { nowait = true } },
 
     -- keep cursor in the middle of the screen
     ["n"] = { "nzzzv" },
@@ -91,7 +84,7 @@ M.hop = {
     --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
     --   "find current line backward",
     -- },
-    ["f"] = { ":HopChar2<CR>", "find word" },
+    ["<tab>"] = { ":HopChar2<CR>", "find word" },
   },
 }
 
