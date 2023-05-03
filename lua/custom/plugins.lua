@@ -234,6 +234,11 @@ local plugins = {
       vim.fn["fzf#install"]()
     end,
   },
+
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+  },
 }
 
 return plugins

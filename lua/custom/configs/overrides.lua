@@ -73,16 +73,29 @@ M.telescope = {
       },
     },
   },
-  extensions_list = { "themes", "terms", "advanced_git_search", "project", "yank_history" },
+  extensions_list = {
+    "themes",
+    "terms",
+    "advanced_git_search",
+    "project",
+    "yank_history",
+    "file_browser",
+  },
   extensions = {
     project = {
       base_dirs = {
         { "~/workspace", max_depth = 2 },
         { "~/.config/nvim", max_depth = 1 },
-        { "~/Dropbox/obsidian", max_depth = 1},
+        { "~/Dropbox/obsidian", max_depth = 1 },
       },
       hidden_files = false,
       max_depth = 1,
+    },
+    file_browser = {
+      theme = "ivy",
+      hijack_netrw = true,
+      hidden = false,
+      previewer = false,
     },
   },
 }
