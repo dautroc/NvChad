@@ -13,10 +13,7 @@ wk.register(
       m = { name = "+misc" },
       l = { name = "+lsp" },
       t = { name = "+term" },
-      g = {
-        name = "+git",
-        p = { name = "+pull request" },
-      },
+      g = { name = "+git" },
       o = {
         name = "+obsidian",
         l = { name = "+links" },
