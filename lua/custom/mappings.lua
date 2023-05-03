@@ -48,6 +48,7 @@ M.general = {
     ["<leader>q"] = { ":lua require('custom.functions').smart_quit()<CR>", "quit buffer" },
     ["<leader>Q"] = { ":lua require('custom.functions').smart_quit('all')<CR>", "quit nvim" },
     ["<leader><tab>"] = { ":b#<CR>", "last buffer" },
+    ["<leader>j"] = { ":lua require('treesj').toggle()<CR>", "tree sj toggle" },
 
     -- keep cursor in the middle of the screen
     ["n"] = { "nzzzv" },
