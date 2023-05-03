@@ -233,7 +233,7 @@ local plugins = {
     build = function()
       vim.fn["fzf#install"]()
     end,
-  }
+  },
 }
 
 return plugins
