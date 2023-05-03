@@ -216,11 +216,24 @@ local plugins = {
     "Wansmer/treesj",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
-      require("treesj").setup({
-        use_default_keymaps = false
-      })
+      require("treesj").setup {
+        use_default_keymaps = false,
+      }
     end,
   },
+
+  {
+    "kevinhwang91/nvim-bqf",
+    event = "VeryLazy",
+  },
+
+  {
+    "junegunn/fzf",
+    event = "VeryLazy",
+    build = function()
+      vim.fn["fzf#install"]()
+    end,
+  }
 }
 
 return plugins
