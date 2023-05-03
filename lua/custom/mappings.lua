@@ -53,6 +53,12 @@ M.general = {
     -- keep cursor in the middle of the screen
     ["n"] = { "nzzzv" },
     ["N"] = { "Nzzzv" },
+
+    -- tab
+    ["tn"] = { ":tabnew<CR>" },
+    ["tt"] = { ":tabclose<CR>" },
+    ["tl"] = { ":tabnext<CR>" },
+    ["th"] = { ":tabprevious<CR>" }
   },
   i = {
     ---- Undo break points
