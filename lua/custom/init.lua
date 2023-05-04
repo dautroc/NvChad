@@ -23,15 +23,10 @@ end
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
-require "custom.handlers"
-
--- Auto clear command line after 5 seconds
+-- Auto clear command line
 autocmd("CmdlineLeave", {
-	group = "custom",
 	callback = function()
-		vim.fn.timer_start(5000, function()
-			print(" ")
-		end)
+    print(" ")
 	end
 })
 
