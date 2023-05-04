@@ -1,11 +1,12 @@
--- local autocmd = vim.api.nvim_create_autocmd
+local autocmd = vim.api.nvim_create_autocmd
 
 -- Auto resize panes when resizing nvim window
--- autocmd("VimResized", {
---   pattern = "*",
---   command = "tabdo wincmd =",
--- })
+autocmd("VimResized", {
+  pattern = "*",
+  command = "tabdo wincmd =",
+})
 
+-- Terminal keymaps
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
   vim.keymap.set('t', 'jl', [[<C-\><C-n>]], opts)
@@ -23,3 +24,19 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 require "custom.handlers"
+
+-- Auto clear command line after 5 seconds
+autocmd("CmdlineLeave", {
+	group = "custom",
+	callback = function()
+		vim.fn.timer_start(5000, function()
+			print(" ")
+		end)
+	end
+})
+
+-- Disable virtual text and signs for diagnostics
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  virtual_text = false,
+  signs = false,
+})
