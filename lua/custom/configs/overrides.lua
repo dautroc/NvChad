@@ -80,6 +80,7 @@ M.telescope = {
     "project",
     "yank_history",
     "file_browser",
+    "media_files",
   },
   extensions = {
     project = {
@@ -97,6 +98,13 @@ M.telescope = {
       hidden = false,
       previewer = false,
     },
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = {"png", "webp", "jpg", "jpeg"},
+      -- find command (defaults to `fd`)
+      find_cmd = "rg"
+    }
   },
 }
 

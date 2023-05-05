@@ -239,6 +239,13 @@ local plugins = {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
   },
+
+  {
+    "wakatime/vim-wakatime",
+    event = "VeryLazy",
+  },
+
+  { "nvim-telescope/telescope-media-files.nvim" },
 }
 
 return plugins
