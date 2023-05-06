@@ -44,7 +44,7 @@ M.mason = {
 -- git support in nvimtree
 M.nvimtree = {
   update_focused_file = {
-    enable = false,
+    enable = true,
     -- update_root = true,
   },
   git = {
