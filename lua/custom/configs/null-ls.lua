@@ -19,7 +19,7 @@ local sources = {
   b.formatting.clang_format,
 
   -- cpell
-  b.diagnostics.cspell,
+  -- b.diagnostics.cspell,
   b.code_actions.cspell,
   b.completion.cspell,
 }

@@ -61,6 +61,13 @@ M.nvimtree = {
       },
     },
   },
+  actions = {
+    open_file = {
+      window_picker = {
+        enable = false,
+      },
+    },
+  },
 }
 
 M.telescope = {
@@ -101,10 +108,10 @@ M.telescope = {
     media_files = {
       -- filetypes whitelist
       -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = {"png", "webp", "jpg", "jpeg"},
+      filetypes = { "png", "webp", "jpg", "jpeg" },
       -- find command (defaults to `fd`)
-      find_cmd = "rg"
-    }
+      find_cmd = "rg",
+    },
   },
 }
 
