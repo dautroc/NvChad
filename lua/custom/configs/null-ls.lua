@@ -17,6 +17,11 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
+
+  -- cpell
+  b.diagnostics.cspell,
+  b.code_actions.cspell,
+  b.completion.cspell,
 }
 
 null_ls.setup {
