@@ -172,18 +172,18 @@ M.rails = {
     ["<leader>rl"] = { ":Telescope find_files cwd=config/locales<CR>", "rails locales" },
     ["<leader>rr"] = { ":Telescope find_files cwd=lib/tasks<CR>", "rake tasks" },
 
-    ["<leader>rtf"] = {
-      function()
-        require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand "%", "vertical")
-      end,
-      "test file",
-    },
-    ["<leader>rtn"] = {
-      function()
-        require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand "%" .. ":" .. vim.fn.line ".", "vertical")
-      end,
-      "test nearest",
-    },
+    -- ["<leader>rtf"] = {
+    --   function()
+    --     require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand "%", "vertical")
+    --   end,
+    --   "test file",
+    -- },
+    -- ["<leader>rtn"] = {
+    --   function()
+    --     require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand "%" .. ":" .. vim.fn.line ".", "vertical")
+    --   end,
+    --   "test nearest",
+    -- },
   },
 }
 
@@ -240,6 +240,13 @@ M.git = {
 --     },
 --   },
 -- }
+
+M.test = {
+  n = {
+    ["<leader>tf"] = { ":TestFile<CR>", "test file" },
+    ["<leader>tn"] = { ":TestNearest<CR>", "test nearest" },
+  }
+}
 
 M.obsidian = {
   n = {

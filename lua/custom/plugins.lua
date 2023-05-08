@@ -246,6 +246,12 @@ local plugins = {
   },
 
   { "nvim-telescope/telescope-media-files.nvim" },
+
+  {
+    "vim-test/vim-test",
+    event = "VeryLazy",
+    dependencies = { "preservim/vimux" },
+  },
 }
 
 return plugins
