@@ -27,7 +27,7 @@ M.ui = {
 
   cheatsheet = { theme = "simple" },
   tabufline = {
-    enabled = true,
+    enabled = false,
   }
 }
 

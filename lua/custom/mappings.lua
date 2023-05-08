@@ -91,7 +91,7 @@ M.hop = {
     --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
     --   "find current line backward",
     -- },
-    ["<tab>"] = { ":HopChar2<CR>", "find word" },
+    ["<leader>s"] = { ":HopChar2<CR>", "find word" },
   },
 }
 

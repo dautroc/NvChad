@@ -21,7 +21,6 @@ local sources = {
   -- cpell
   -- b.diagnostics.cspell,
   b.code_actions.cspell,
-  b.completion.cspell,
 }
 
 null_ls.setup {
