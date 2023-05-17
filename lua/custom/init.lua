@@ -35,3 +35,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
   virtual_text = false,
   signs = false,
 })
+
+-- vim-test strategy
+vim.g['test#ruby#rspec#executable'] = 'bundle exec rspec'
+vim.g['test#strategy'] = 'vimux'

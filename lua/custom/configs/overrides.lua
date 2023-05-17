@@ -72,6 +72,7 @@ M.nvimtree = {
 
 M.telescope = {
   defaults = {
+    file_ignore_patterns = { "node_modules", "vendor" },
     mappings = {
       i = {
         ["<esc>"] = require("telescope.actions").close,

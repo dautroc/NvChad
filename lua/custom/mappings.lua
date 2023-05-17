@@ -171,6 +171,7 @@ M.rails = {
     ["<leader>rf"] = { ":Telescope find_files cwd=spec/factories<CR>", "rails factories" },
     ["<leader>rl"] = { ":Telescope find_files cwd=config/locales<CR>", "rails locales" },
     ["<leader>rr"] = { ":Telescope find_files cwd=lib/tasks<CR>", "rake tasks" },
+    ["<leader>rv"] = { ":Telescope find_files cwd=app/views<CR>", "rails views" },
 
     -- ["<leader>rtf"] = {
     --   function()
