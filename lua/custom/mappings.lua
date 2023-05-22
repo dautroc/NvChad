@@ -95,33 +95,6 @@ M.hop = {
   },
 }
 
--- M.tabufline = {
---   n = {
---     -- cycle through buffers
---     ["tk"] = {
---       function()
---         require("nvchad_ui.tabufline").tabuflineNext()
---       end,
---       "goto next buffer",
---     },
---
---     ["tj"] = {
---       function()
---         require("nvchad_ui.tabufline").tabuflinePrev()
---       end,
---       "goto prev buffer",
---     },
---
---     -- close buffer + hide terminal buffer
---     ["<leader>x"] = {
---       function()
---         require("nvchad_ui.tabufline").close_buffer()
---       end,
---       "close buffer",
---     },
---   },
--- }
-
 M.lspconfig = {
   n = {
     ["<leader>lq"] = { vim.diagnostic.setloclist, "diagnostic setloclist" },
@@ -172,19 +145,6 @@ M.rails = {
     ["<leader>rl"] = { ":Telescope find_files cwd=config/locales<CR>", "rails locales" },
     ["<leader>rr"] = { ":Telescope find_files cwd=lib/tasks<CR>", "rake tasks" },
     ["<leader>rv"] = { ":Telescope find_files cwd=app/views<CR>", "rails views" },
-
-    -- ["<leader>rtf"] = {
-    --   function()
-    --     require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand "%", "vertical")
-    --   end,
-    --   "test file",
-    -- },
-    -- ["<leader>rtn"] = {
-    --   function()
-    --     require("nvterm.terminal").send("bundle exec rspec " .. vim.fn.expand "%" .. ":" .. vim.fn.line ".", "vertical")
-    --   end,
-    --   "test nearest",
-    -- },
   },
 }
 
@@ -216,31 +176,6 @@ M.git = {
     ["<leader>gy"] = { ":GBrowse<CR>", "open git link" },
   },
 }
-
--- M.nvterm = {
---   n = {
---     ["<leader>tf"] = {
---       function()
---         require("nvterm.terminal").new "float"
---       end,
---       "new float term",
---     },
---
---     ["<leader>tx"] = {
---       function()
---         require("nvterm.terminal").new "horizontal"
---       end,
---       "new horizontal term",
---     },
---
---     ["<leader>tv"] = {
---       function()
---         require("nvterm.terminal").new "vertical"
---       end,
---       "new vertical term",
---     },
---   },
--- }
 
 M.test = {
   n = {
