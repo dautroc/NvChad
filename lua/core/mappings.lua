@@ -65,34 +65,34 @@ M.general = {
   },
 }
 
-M.tabufline = {
-  plugin = true,
-
-  n = {
-    -- cycle through buffers
-    ["<tab>"] = {
-      function()
-        require("nvchad_ui.tabufline").tabuflineNext()
-      end,
-      "Goto next buffer",
-    },
-
-    ["<S-tab>"] = {
-      function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
-      end,
-      "Goto prev buffer",
-    },
-
-    -- close buffer + hide terminal buffer
-    ["<leader>x"] = {
-      function()
-        require("nvchad_ui.tabufline").close_buffer()
-      end,
-      "Close buffer",
-    },
-  },
-}
+-- M.tabufline = {
+--   plugin = true,
+--
+--   n = {
+--     -- cycle through buffers
+--     ["<tab>"] = {
+--       function()
+--         require("nvchad_ui.tabufline").tabuflineNext()
+--       end,
+--       "Goto next buffer",
+--     },
+--
+--     ["<S-tab>"] = {
+--       function()
+--         require("nvchad_ui.tabufline").tabuflinePrev()
+--       end,
+--       "Goto prev buffer",
+--     },
+--
+--     -- close buffer + hide terminal buffer
+--     ["<leader>x"] = {
+--       function()
+--         require("nvchad_ui.tabufline").close_buffer()
+--       end,
+--       "Close buffer",
+--     },
+--   },
+-- }
 
 M.comment = {
   plugin = true,

@@ -35,7 +35,7 @@ M.general = {
     ["<C-k>"] = { "<cmd>lua require('tmux').move_up()<cr>" },
     ["<C-l>"] = { "<cmd>lua require('tmux').move_right()<cr>" },
 
-    [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["H"] = { "^", "go to end of current line", opts = { nowait = true } },
     -- ["J"] = { "Jx", "join lines", opts = { nowait = true } },
     ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
@@ -91,36 +91,36 @@ M.hop = {
     --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
     --   "find current line backward",
     -- },
-    ["<leader>s"] = { ":HopChar2<CR>", "find word" },
+    [";"] = { ":HopChar2<CR>", "find word" },
   },
 }
 
-M.tabufline = {
-  n = {
-    -- cycle through buffers
-    ["tk"] = {
-      function()
-        require("nvchad_ui.tabufline").tabuflineNext()
-      end,
-      "goto next buffer",
-    },
-
-    ["tj"] = {
-      function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
-      end,
-      "goto prev buffer",
-    },
-
-    -- close buffer + hide terminal buffer
-    ["<leader>x"] = {
-      function()
-        require("nvchad_ui.tabufline").close_buffer()
-      end,
-      "close buffer",
-    },
-  },
-}
+-- M.tabufline = {
+--   n = {
+--     -- cycle through buffers
+--     ["tk"] = {
+--       function()
+--         require("nvchad_ui.tabufline").tabuflineNext()
+--       end,
+--       "goto next buffer",
+--     },
+--
+--     ["tj"] = {
+--       function()
+--         require("nvchad_ui.tabufline").tabuflinePrev()
+--       end,
+--       "goto prev buffer",
+--     },
+--
+--     -- close buffer + hide terminal buffer
+--     ["<leader>x"] = {
+--       function()
+--         require("nvchad_ui.tabufline").close_buffer()
+--       end,
+--       "close buffer",
+--     },
+--   },
+-- }
 
 M.lspconfig = {
   n = {

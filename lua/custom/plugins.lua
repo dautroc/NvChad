@@ -58,7 +58,6 @@ local plugins = {
   {
     "folke/which-key.nvim",
     config = function()
-      require "plugins.configs.whichkey"
       require "custom.configs.whichkey"
     end,
   },
@@ -251,6 +250,19 @@ local plugins = {
     "vim-test/vim-test",
     event = "VeryLazy",
     dependencies = { "preservim/vimux" },
+  },
+
+  {
+    "NvChad/nvterm",
+    enabled = false,
+  },
+
+  {
+    "tomasky/bookmarks.nvim",
+    event = "BufRead",
+    config = function()
+      require("custom.configs.bookmarks")
+    end
   },
 }
 
