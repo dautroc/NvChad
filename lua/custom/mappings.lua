@@ -53,6 +53,8 @@ M.general = {
     -- keep cursor in the middle of the screen
     ["n"] = { "nzzzv" },
     ["N"] = { "Nzzzv" },
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-u>"] = { "<C-u>zz" },
 
     -- tab
     ["tn"] = { ":tabnew<CR>" },
@@ -81,16 +83,27 @@ M.general = {
   v = {
     ["H"] = { "^", "go to end of current line", opts = { nowait = true } },
     ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
+    ["i"] = { ":'<,'>Silicon ~/Desktop/screenshots/<CR>", "generate image", opts = { nowait = true } },
   },
 }
 
 M.hop = {
   n = {
-    [";"] = { "<cmd>HopChar2<CR>", "find word" },
+    ["s"] = { "" },
+    ["sj"] = { "<cmd>HopWordAC<CR>" },
+    ["sk"] = { "<cmd>HopWordBC<CR>" },
+    ["sl"] = { "<cmd>HopLine<CR>" },
+    ["f"] = { "<cmd>HopChar1CurrentLineAC<CR>" },
+    ["F"] = { "<cmd>HopChar1CurrentLineBC<CR>" },
   },
 
   v = {
-    [";"] = { "<cmd>HopChar2<CR>", "find word" },
+    ["s"] = { "" },
+    ["sj"] = { "<cmd>HopWordAC<CR>" },
+    ["sk"] = { "<cmd>HopWordBC<CR>" },
+    ["sl"] = { "<cmd>HopLine<CR>" },
+    ["f"] = { "<cmd>HopChar1CurrentLineAC<CR>" },
+    ["F"] = { "<cmd>HopChar1CurrentLineBC<CR>" },
   },
 }
 
