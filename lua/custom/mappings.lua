@@ -86,15 +86,11 @@ M.general = {
 
 M.hop = {
   n = {
-    -- ["f"] = {
-    --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.AFTER_CURSOR, current_line_only = true })<CR>",
-    --   "find current line forward",
-    -- },
-    -- ["F"] = {
-    --   ":lua require('hop').hint_char1({ direction = require('hop.hint').HintDirection.BEFORE_CURSOR, current_line_only = true })<CR>",
-    --   "find current line backward",
-    -- },
-    [";"] = { ":HopChar2<CR>", "find word" },
+    [";"] = { "<cmd>HopChar2<CR>", "find word" },
+  },
+
+  v = {
+    [";"] = { "<cmd>HopChar2<CR>", "find word" },
   },
 }
 
@@ -184,7 +180,7 @@ M.test = {
   n = {
     ["<leader>tf"] = { ":TestFile<CR>", "test file" },
     ["<leader>tn"] = { ":TestNearest<CR>", "test nearest" },
-  }
+  },
 }
 
 M.obsidian = {
