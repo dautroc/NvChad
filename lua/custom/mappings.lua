@@ -57,10 +57,10 @@ M.general = {
     ["<C-u>"] = { "<C-u>zz" },
 
     -- tab
-    ["tn"] = { ":tabnew<CR>" },
-    ["tt"] = { ":tabclose<CR>" },
-    ["tl"] = { ":tabnext<CR>" },
-    ["th"] = { ":tabprevious<CR>" },
+    -- ["tn"] = { ":tabnew<CR>" },
+    -- ["tt"] = { ":tabclose<CR>" },
+    -- ["tl"] = { ":tabnext<CR>" },
+    -- ["th"] = { ":tabprevious<CR>" },
 
     -- Oil
     ["<leader>e"] = { ":Oil<CR>", "oil" },
