@@ -261,7 +261,17 @@ local plugins = {
     "tomasky/bookmarks.nvim",
     event = "BufRead",
     config = function()
-      require("custom.configs.bookmarks")
+      require "custom.configs.bookmarks"
+    end,
+  },
+
+  {
+    "stevearc/oil.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("oil").setup()
     end
   },
 }

@@ -58,7 +58,10 @@ M.general = {
     ["tn"] = { ":tabnew<CR>" },
     ["tt"] = { ":tabclose<CR>" },
     ["tl"] = { ":tabnext<CR>" },
-    ["th"] = { ":tabprevious<CR>" }
+    ["th"] = { ":tabprevious<CR>" },
+
+    -- Oil
+    ["<leader>e"] = { ":Oil<CR>", "oil" },
   },
   i = {
     ---- Undo break points
