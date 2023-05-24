@@ -294,8 +294,19 @@ local plugins = {
   {
     "windwp/nvim-autopairs",
     config = function()
-      require("custom.configs.autopairs")
-    end
+      require "custom.configs.autopairs"
+    end,
+  },
+
+  {
+    "willothy/veil.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-file-browser.nvim",
+    },
+    config = true
   },
 }
 
