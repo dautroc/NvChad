@@ -36,8 +36,8 @@ M.mason = {
     "prettier",
 
     -- c/cpp stuff
-    -- "clangd",
-    -- "clang-format",
+    "clangd",
+    "clang-format",
   },
 }
 
@@ -84,7 +84,6 @@ M.telescope = {
   extensions_list = {
     "themes",
     "terms",
-    "advanced_git_search",
     "project",
     "yank_history",
     "file_browser",
