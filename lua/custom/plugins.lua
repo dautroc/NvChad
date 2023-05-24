@@ -290,6 +290,13 @@ local plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
+
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("custom.configs.autopairs")
+    end
+  },
 }
 
 return plugins
