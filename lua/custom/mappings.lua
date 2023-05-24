@@ -84,7 +84,7 @@ M.general = {
   v = {
     ["H"] = { "^", "go to end of current line", opts = { nowait = true } },
     ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
-    ["i"] = { ":'<,'>Silicon ~/Desktop/screenshots/<CR>", "generate image", opts = { nowait = true } },
+    ["<CR>"] = { ":'<,'>Silicon ~/Desktop/screenshots/<CR>", "generate image", opts = { nowait = true } },
   },
 }
 
@@ -158,6 +158,9 @@ M.rails = {
     ["<leader>rl"] = { ":Telescope find_files cwd=config/locales<CR>", "rails locales" },
     ["<leader>rr"] = { ":Telescope find_files cwd=lib/tasks<CR>", "rake tasks" },
     ["<leader>rv"] = { ":Telescope find_files cwd=app/views<CR>", "rails views" },
+
+    -- custom script
+    ["<leader>rt"] = { ":lua require('custom.configs.ror').list_table_columns()<CR>", "rails tables" },
   },
 }
 

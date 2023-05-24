@@ -307,8 +307,13 @@ local plugins = {
       "nvim-telescope/telescope-file-browser.nvim",
     },
     config = function()
-      require("custom.configs.veil")
+      require "custom.configs.veil"
     end,
+  },
+
+  {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
   },
 }
 
