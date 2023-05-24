@@ -306,7 +306,9 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-file-browser.nvim",
     },
-    config = true
+    config = function()
+      require("custom.configs.veil")
+    end,
   },
 }
 
