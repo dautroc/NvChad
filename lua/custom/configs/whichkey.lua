@@ -19,7 +19,6 @@ wk.register(
       },
       r = {
         name = "+rails",
-        t = { name = "+tests" },
       },
     }
   }
