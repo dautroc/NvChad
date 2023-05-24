@@ -280,6 +280,16 @@ local plugins = {
     "segeljakt/vim-silicon",
     event = "VeryLazy",
   },
+
+  {
+    "sudormrfbin/cheatsheet.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/popup.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+  },
 }
 
 return plugins
