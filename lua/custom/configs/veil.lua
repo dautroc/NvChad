@@ -35,7 +35,7 @@ require("veil").setup {
       {
         icon = "",
         text = "Recent files",
-        shortcut = "b",
+        shortcut = "r",
         callback = function()
           require("telescope.builtin").oldfiles()
         end,
