@@ -147,14 +147,6 @@ local plugins = {
   },
 
   {
-    "pwntester/octo.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("octo").setup()
-    end,
-  },
-
-  {
     "mcauley-penney/tidy.nvim",
     event = "BufWritePre",
     config = function()
@@ -163,11 +155,6 @@ local plugins = {
         mappings = {},
       }
     end,
-  },
-
-  {
-    "aaronhallaert/advanced-git-search.nvim",
-    event = "VeryLazy",
   },
 
   {
