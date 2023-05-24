@@ -91,7 +91,7 @@ M.general = {
 M.hop = {
   n = {
     ["s"] = { "" },
-    ["ss"] = { "<cmd>HopWord<CR>" },
+    ["ss"] = { "<cmd>HopChar2<CR>" },
     ["sl"] = { "<cmd>HopLine<CR>" },
     ["f"] = { "<cmd>HopChar1CurrentLineAC<CR>" },
     ["F"] = { "<cmd>HopChar1CurrentLineBC<CR>" },
@@ -99,7 +99,7 @@ M.hop = {
 
   v = {
     ["s"] = { "" },
-    ["ss"] = { "<cmd>HopWord<CR>" },
+    ["ss"] = { "<cmd>HopChar2<CR>" },
     ["sl"] = { "<cmd>HopLine<CR>" },
     ["f"] = { "<cmd>HopChar1CurrentLineAC<CR>" },
     ["F"] = { "<cmd>HopChar1CurrentLineBC<CR>" },
