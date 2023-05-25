@@ -25,6 +25,7 @@ M.disabled = {
     ["<leader>v"] = "",
     ["<leader>gt"] = "",
     ["<C-a>"] = "",
+    ["<C-x>"] = "",
   },
 }
 
@@ -90,7 +91,6 @@ M.general = {
 
 M.hop = {
   n = {
-    ["s"] = { "" },
     ["ss"] = { "<cmd>HopChar2<CR>" },
     ["sl"] = { "<cmd>HopLine<CR>" },
     ["f"] = { "<cmd>HopChar1CurrentLineAC<CR>" },
@@ -98,7 +98,6 @@ M.hop = {
   },
 
   v = {
-    ["s"] = { "" },
     ["ss"] = { "<cmd>HopChar2<CR>" },
     ["sl"] = { "<cmd>HopLine<CR>" },
     ["f"] = { "<cmd>HopChar1CurrentLineAC<CR>" },
