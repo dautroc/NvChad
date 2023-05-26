@@ -65,7 +65,6 @@ M.general = {
 
     -- Oil
     ["<leader>e"] = { ":Oil<CR>", "oil" },
-    ["<leader>?"] = { ":Cheatsheet<CR>", "oil" },
   },
   i = {
     ---- Undo break points

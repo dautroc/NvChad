@@ -269,16 +269,6 @@ local plugins = {
   },
 
   {
-    "sudormrfbin/cheatsheet.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "nvim-lua/popup.nvim",
-      "nvim-lua/plenary.nvim",
-    },
-  },
-
-  {
     "windwp/nvim-autopairs",
     config = function()
       require "custom.configs.autopairs"
@@ -301,6 +291,28 @@ local plugins = {
   {
     "stevearc/dressing.nvim",
     event = "VeryLazy",
+  },
+
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    event = "VeryLazy",
+    opts = {
+      load = {
+        ["core.defaults"] = {}, -- Loads default behaviour
+        ["core.concealer"] = {}, -- Adds pretty icons to your documents
+        ["core.dirman"] = { -- Manages Neorg workspaces
+          config = {
+            workspaces = {
+              eh = "~/Dropbox/notes/eh/",
+              joylists = "~/Dropbox/notes/joylists/",
+              home = "~/Dropbox/notes/home/",
+            },
+          },
+        },
+      },
+    },
+    dependencies = { { "nvim-lua/plenary.nvim" } },
   },
 }
 
