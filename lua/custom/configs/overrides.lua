@@ -88,6 +88,7 @@ M.telescope = {
     "yank_history",
     "file_browser",
     "media_files",
+    "scope",
   },
   extensions = {
     project = {

@@ -23,6 +23,7 @@ M.disabled = {
     ["<leader>b"] = "",
     ["<leader>h"] = "",
     ["<leader>v"] = "",
+    ["<leader>n"] = "",
     ["<leader>gt"] = "",
     ["<C-a>"] = "",
     ["<C-x>"] = "",
@@ -57,13 +58,13 @@ M.general = {
     ["<C-u>"] = { "<C-u>zz" },
 
     -- tab
-    -- ["tn"] = { ":tabnew<CR>" },
-    -- ["tt"] = { ":tabclose<CR>" },
-    -- ["tl"] = { ":tabnext<CR>" },
-    -- ["th"] = { ":tabprevious<CR>" },
+    ["tn"] = { ":tabnew<CR>" },
+    ["tt"] = { ":tabclose<CR>" },
+    ["tj"] = { ":tabprevious<CR>" },
+    ["tk"] = { ":tabnext<CR>" },
 
     -- Oil
-    ["<leader>e"] = { ":Oil<CR>", "oil" },
+    ["<leader>e"] = { ":Oil<CR>", "Explorer" },
   },
   i = {
     ---- Undo break points
@@ -161,8 +162,15 @@ M.rails = {
 
 M.buffers = {
   n = {
+    ["<tab>"] = { ":BufferLineCycleNext<CR>", "next buffer" },
+    ["<S-tab>"] = { ":BufferLineCyclePrev<CR>", "previous buffer" },
+    ["<leader>x"] = { ":bdelete<CR>", "close buffer" },
+
     ["<leader>by"] = { ":let @+ = expand('%')<CR>", "yank buffer path" },
     ["<leader>bY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>", "yank buffer path with line number" },
+    ["<leader>bb"] = { ":Telescope scope buffers<CR>", "buffers in current tab " },
+    ["<leader>bh"] = { ":lua require'bufferline'.move_to(1)<CR>", "move left" },
+    ["<leader>bl"] = { ":lua require'bufferline'.move_to(-1)<CR>", "move right" },
   },
 }
 
