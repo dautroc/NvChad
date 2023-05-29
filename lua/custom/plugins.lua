@@ -112,8 +112,6 @@ local plugins = {
 
   { "kdheepak/lazygit.nvim", event = "VeryLazy" },
 
-  { "tiagovla/scope.nvim", event = "VeryLazy" }, -- Using tab
-
   { "tpope/vim-fugitive", event = "VeryLazy" },
 
   { "tpope/vim-rhubarb", event = "VeryLazy" },
@@ -331,32 +329,32 @@ local plugins = {
     dependencies = { { "nvim-lua/plenary.nvim" } },
   },
 
-  {
-    "akinsho/bufferline.nvim",
-    event = "VeryLazy",
-    version = "*",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("bufferline").setup {
-        options = {
-          offsets = {
-            {
-              filetype = "NvimTree",
-              text = "File Explorer",
-              highlight = "Directory",
-              separator = true, -- use a "true" to enable the default, or set your own character
-            },
-          },
-        },
-      }
-    end,
-  },
+  -- {
+  --   "akinsho/bufferline.nvim",
+  --   event = "VeryLazy",
+  --   version = "*",
+  --   dependencies = { "nvim-tree/nvim-web-devicons" },
+  --   config = function()
+  --     require("bufferline").setup {
+  --       options = {
+  --         offsets = {
+  --           {
+  --             filetype = "NvimTree",
+  --             text = "File Explorer",
+  --             highlight = "Directory",
+  --             separator = true, -- use a "true" to enable the default, or set your own character
+  --           },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
 
-  {
-    "tiagovla/scope.nvim",
-    event = "VeryLazy",
-    config = true,
-  },
+  -- {
+  --   "tiagovla/scope.nvim",
+  --   event = "VeryLazy",
+  --   config = true,
+  -- },
 }
 
 return plugins
