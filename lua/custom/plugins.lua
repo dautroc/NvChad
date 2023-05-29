@@ -329,32 +329,24 @@ local plugins = {
     dependencies = { { "nvim-lua/plenary.nvim" } },
   },
 
-  -- {
-  --   "akinsho/bufferline.nvim",
-  --   event = "VeryLazy",
-  --   version = "*",
-  --   dependencies = { "nvim-tree/nvim-web-devicons" },
-  --   config = function()
-  --     require("bufferline").setup {
-  --       options = {
-  --         offsets = {
-  --           {
-  --             filetype = "NvimTree",
-  --             text = "File Explorer",
-  --             highlight = "Directory",
-  --             separator = true, -- use a "true" to enable the default, or set your own character
-  --           },
-  --         },
-  --       },
-  --     }
-  --   end,
-  -- },
+  {
+    "NvChad/nvim-colorizer.lua",
+    init = function()
+      require("core.utils").lazy_load "nvim-colorizer.lua"
+    end,
+    config = function(_, opts)
+      require("colorizer").setup({
+        user_default_options = {
+          names = false,
+        }
+      })
 
-  -- {
-  --   "tiagovla/scope.nvim",
-  --   event = "VeryLazy",
-  --   config = true,
-  -- },
+      -- execute colorizer as soon as possible
+      vim.defer_fn(function()
+        require("colorizer").attach_to_buffer(0)
+      end, 0)
+    end,
+  },
 }
 
 return plugins
