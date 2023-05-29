@@ -335,11 +335,11 @@ local plugins = {
       require("core.utils").lazy_load "nvim-colorizer.lua"
     end,
     config = function(_, opts)
-      require("colorizer").setup({
+      require("colorizer").setup {
         user_default_options = {
           names = false,
-        }
-      })
+        },
+      }
 
       -- execute colorizer as soon as possible
       vim.defer_fn(function()
