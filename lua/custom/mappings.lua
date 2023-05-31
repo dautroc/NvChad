@@ -163,10 +163,6 @@ M.rails = {
 
 M.buffers = {
   n = {
-    ["<tab>"] = { ":BufferLineCycleNext<CR>", "next buffer" },
-    ["<S-tab>"] = { ":BufferLineCyclePrev<CR>", "previous buffer" },
-    ["<leader>x"] = { ":bdelete<CR>", "close buffer" },
-
     ["<leader>by"] = { ":let @+ = expand('%')<CR>", "yank buffer path" },
     ["<leader>bY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>", "yank buffer path with line number" },
     ["<leader>bb"] = { ":Telescope scope buffers<CR>", "buffers in current tab " },

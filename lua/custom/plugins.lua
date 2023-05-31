@@ -308,28 +308,6 @@ local plugins = {
   },
 
   {
-    "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers",
-    event = "VeryLazy",
-    opts = {
-      load = {
-        ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.dirman"] = { -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              eh = "~/Dropbox/notes/eh/",
-              joylists = "~/Dropbox/notes/joylists/",
-              home = "~/Dropbox/notes/home/",
-            },
-          },
-        },
-      },
-    },
-    dependencies = { { "nvim-lua/plenary.nvim" } },
-  },
-
-  {
     "NvChad/nvim-colorizer.lua",
     init = function()
       require("core.utils").lazy_load "nvim-colorizer.lua"
