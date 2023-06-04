@@ -165,9 +165,6 @@ M.buffers = {
   n = {
     ["<leader>by"] = { ":let @+ = expand('%')<CR>", "yank buffer path" },
     ["<leader>bY"] = { ":let @+ = join([expand('%'),  line('.')], ':')<CR>", "yank buffer path with line number" },
-    ["<leader>bb"] = { ":Telescope scope buffers<CR>", "buffers in current tab " },
-    ["<leader>bh"] = { ":lua require'bufferline'.move_to(1)<CR>", "move left" },
-    ["<leader>bl"] = { ":lua require'bufferline'.move_to(-1)<CR>", "move right" },
   },
 }
 
