@@ -58,6 +58,12 @@ M.general = {
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
 
+    -- tab
+    ["tn"] = { ":tabnew<CR>" },
+    ["tt"] = { ":tabclose<CR>" },
+    ["tj"] = { ":tabprevious<CR>" },
+    ["tk"] = { ":tabnext<CR>" },
+
     -- Oil
     ["<leader>e"] = { ":Oil<CR>", "Explorer" },
   },
