@@ -71,6 +71,7 @@ local plugins = {
   {
     "NvChad/nvterm",
     opts = overrides.nvterm,
+    enabled = false,
   },
 
   { "tpope/vim-projectionist", event = "VeryLazy" },
