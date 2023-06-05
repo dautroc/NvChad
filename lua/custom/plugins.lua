@@ -141,7 +141,7 @@ local plugins = {
           end
           return tostring(os.time()) .. "-" .. suffix
         end,
-        notes_subdir = "notes",
+        -- notes_subdir = "notes",
         daily_notes = {
           folder = "dailies",
         },
@@ -266,12 +266,12 @@ local plugins = {
         keymaps = {
           ["g?"] = "actions.show_help",
           ["<CR>"] = "actions.select",
-          ["<C-s>"] = "actions.select_vsplit",
-          ["<C-h>"] = "actions.select_split",
+          ["<C-v>"] = "actions.select_vsplit",
+          ["<C-s>"] = "actions.select_split",
           ["<C-t>"] = "actions.select_tab",
           ["<C-p>"] = "actions.preview",
-          ["q"] = "actions.close",
-          ["<C-l>"] = "actions.refresh",
+          ["<C-c>"] = "actions.close",
+          ["<C-r>"] = "actions.refresh",
           ["-"] = "actions.parent",
           ["_"] = "actions.open_cwd",
           ["`"] = "actions.cd",
