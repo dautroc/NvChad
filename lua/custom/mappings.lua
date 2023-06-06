@@ -63,9 +63,6 @@ M.general = {
     ["tt"] = { ":tabclose<CR>" },
     ["tj"] = { ":tabprevious<CR>" },
     ["tk"] = { ":tabnext<CR>" },
-
-    -- Oil
-    ["<leader>e"] = { ":Oil<CR>", "Explorer" },
   },
   i = {
     ---- Undo break points
@@ -87,6 +84,14 @@ M.general = {
     ["L"] = { "$", "go to start of current line", opts = { nowait = true } },
     ["<CR>"] = { ":'<,'>Silicon ~/Desktop/screenshots/<CR>", "generate image", opts = { nowait = true } },
   },
+}
+
+M.explorer = {
+  n = {
+    ["<leader>eo"] = { ":Oil<CR>", "oil explorer" },
+    ["<leader>ee"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
+    ["<leader>ef"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
+  }
 }
 
 M.hop = {
