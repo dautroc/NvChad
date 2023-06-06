@@ -74,6 +74,8 @@ local plugins = {
     enabled = false,
   },
 
+  { "tpope/vim-rails", event = "VeryLazy" },
+
   { "tpope/vim-projectionist", event = "VeryLazy" },
 
   {
@@ -262,7 +264,7 @@ local plugins = {
     event = "VeryLazy",
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = true
+    config = true,
   },
 
   {

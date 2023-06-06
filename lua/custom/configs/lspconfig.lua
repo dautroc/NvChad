@@ -10,7 +10,6 @@ local servers = {
   "tsserver",
   "clangd",
   "solargraph",
-  "ruby_ls",
   "typeprof",
   "tailwindcss",
 }
