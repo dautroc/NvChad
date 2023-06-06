@@ -23,6 +23,7 @@ M.disabled = {
     ["<leader>b"] = "",
     ["<leader>h"] = "",
     ["<leader>v"] = "",
+    ["<leader>e"] = "",
     ["<leader>n"] = "",
     ["<leader>gt"] = "",
     ["<C-a>"] = "",
