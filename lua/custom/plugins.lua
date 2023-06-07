@@ -153,17 +153,6 @@ local plugins = {
   },
 
   {
-    "mcauley-penney/tidy.nvim",
-    event = "BufWritePre",
-    config = function()
-      require("tidy").setup {
-        filetype_exclude = { "markdown", "diff" },
-        mappings = {},
-      }
-    end,
-  },
-
-  {
     "nvim-telescope/telescope-project.nvim",
     event = "VeryLazy",
   },
